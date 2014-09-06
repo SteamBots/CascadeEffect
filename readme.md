@@ -2,7 +2,7 @@
 Thavma 7753's Code for the 2014-2015 FTC Season
 
 ##Licensing##
-This is licensed under the Apache License, I guess. Share it around, don't take it as your own.
+This is licensed under the Apache License, I guess. Share it around, don't call it your own.
 
 Here's the text if you really want it:
 
