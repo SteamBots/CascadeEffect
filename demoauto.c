@@ -12,15 +12,37 @@
 
 #include "JoystickDriver.c"  //Include file to "handle" the Bluetooth messages.
 
+int leftspeed, rightspeed;
+
 
 void initializeRobot()
 {
   // Place code here to sinitialize servos to starting positions.
 	nMotorEncoder[driveleft] = 0;
 	nMotorEncoder[driveright] = 0;
-  return;
 }
 
+void speedup()
+{
+	while(leftspeed <= 50 && rightspeed <= 50) {
+		motor[driveleft] = leftspeed;
+		motor[driveright] = rightspeed;
+		leftspeed++;
+		rightspeed++;
+		wait1Msec(1);
+	}
+}
+
+void slowdown()
+{
+	while(leftspeed != 0 && rightspeed != 0) {
+		motor[driveleft] = leftspeed;
+		motor[driveright] = rightspeed;
+		leftspeed--;
+		rightspeed--;
+		wait1Msec(1);
+	}
+}
 
 task main()
 {
