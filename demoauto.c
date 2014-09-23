@@ -50,5 +50,11 @@ task main()
   waitForStart(); // Wait for the beginning of autonomous phase.
 
   speedup();
+
+  while(nMotorEncoder[driveleft] || nMotorEncoder[driveright] >=10) {
+  	motor[driveleft] = 50;
+  	motor[driveright] = 50;
+  }
+
   slowdown();
 }
