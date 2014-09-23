@@ -28,6 +28,7 @@ void speedup()
 		motor[driveright] = rightspeed;
 		leftspeed++;
 		rightspeed++;
+		wait1Msec(1);
 	}
 }
 
@@ -38,6 +39,7 @@ void slowdown()
 		motor[driveright] = rightspeed;
 		leftspeed--;
 		rightspeed--;
+		wait1Msec(1);
 	}
 }
 
